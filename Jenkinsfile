@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script {
                     // Create a Terraform plan and save it to a file
-                    sh "terraform plan -out=tfplan"
+                    sh "terraform plan"
                 }
             }
         }
@@ -38,15 +38,10 @@ pipeline {
             steps {
                 script {
                     // Apply the Terraform plan
-                    sh "terraform apply tfplan"
+                    sh "terraform apply"
                 }
             }
         }
     }
-    post {
-        always {
-            // Clean up Terraform files
-            sh "rm -rf .terraform"
-        }
-    }
+   
 }
