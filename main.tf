@@ -10,7 +10,7 @@ terraform {
   }
 }
 resource "random_string" "random" {
-  length           = 8
+  length           = 10
   special          = true
   override_special = "/@£$"
 }
