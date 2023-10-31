@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     // Initialize the Terraform workspace
-                    envsubst < terraformrc > ~/.terraformrc
+                    envsubst terraformrc ~/.terraformrc
                 }
             }
         }
