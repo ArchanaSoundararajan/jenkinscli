@@ -27,7 +27,7 @@ pipeline {
             steps {
                 script {
                     // Initialize the Terraform workspace
-                    sh "terraform init"
+                    sh "terraform init -input=false"
                 }
             }
         }
