@@ -19,6 +19,7 @@ pipeline {
             steps {
                 script {
                     // Initialize the Terraform workspace
+                    sh "export TerraformEnterpriseToken = $TerraformEnterpriseToken"
                     sh "envsubst < terraformrc > ~/.terraformrc"
                 } 
             }
