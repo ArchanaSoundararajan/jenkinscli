@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Set environment variables for Terraform Enterprise
-        TF_TOKEN = credentials('TerraformEnterpriseToken') // Add a secret text credential with your TFE token
+        TerraformEnterpriseToken = credentials('TerraformEnterpriseToken') // Add a secret text credential with your TFE token
         TFE_ORG = 'your-org-name'
         TFE_WORKSPACE = 'your-workspace-name'
     }
