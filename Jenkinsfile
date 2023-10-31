@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     // Initialize the Terraform workspace
-                    sh "envsubst < .terraformrc > ~/.terraformrc"
+                    sh "export TF_TOKEN_ck-tfe_sandpedia_com = $TerraformEnterpriseToken"
                 }
             }
         }
